@@ -71,11 +71,17 @@ $(".characters").on("click", function() {
 		if (finalEnemy === 2) { $("#lastEnemy").show(); }
 		selectCharacter = 9;
 		$("#fight").show();
-
 		$(this).fadeOut(1000);
 		$("#oH").width("100%");
-		
 		$("#instructionText").text("Click the FIGHT button until you or your opponent wins.  GOOD LUCK!");
+
+		// This changes the background for each new opponent
+		if (finalEnemy === 1) { $("body").css("background-image","url('assets/images/backdrop2.jpg')"); }
+		else if (finalEnemy === 2) { $("body").css("background-image","url('assets/images/backdrop3.jpg')"); }
+
+
+
+
 
 			if (this.value === "125") {
 			 	oppHitPoints = 125;
@@ -133,16 +139,16 @@ $(".characters").on("click", function() {
 // ********** Alt animations???
 // ********** Alt animations???		
 // ********** Alt animations???
-		if (yth === 125) { $("#yourFighter").attr("src","assets/images/subzero_attack.gif"); }
-		else if (yth === 150) { $("#yourFighter").attr("src","assets/images/kitana_attack.gif"); }
-		else if (yth === 175) { $("#yourFighter").attr("src","assets/images/raiden_attack.gif"); }
-		else $("#yourFighter").attr("src","assets/images/scorpion_attack.gif");
+		// if (yth === 125) { $("#yourFighter").attr("src","assets/images/subzero_attack.gif"); }
+		// else if (yth === 150) { $("#yourFighter").attr("src","assets/images/kitana_attack.gif"); }
+		// else if (yth === 175) { $("#yourFighter").attr("src","assets/images/raiden_attack.gif"); }
+		// else $("#yourFighter").attr("src","assets/images/scorpion_attack.gif");
 
-		if (oth === 125) { $("#yourOpponent").attr("src","assets/images/subzero_attack_opp.gif");
-						   $("#yourOpponent").css("margin-left", "0px"); }
-		else if (oth === 150) { $("#yourOpponent").attr("src","assets/images/kitana_attack_opp.gif"); }
-		else if (oth === 175) { $("#yourOpponent").attr("src","assets/images/raiden_attack_opp.gif"); }
-		else $("#yourOpponent").attr("src","assets/images/scorpion_attack_opp.gif");
+		// if (oth === 125) { $("#yourOpponent").attr("src","assets/images/subzero_attack_opp.gif");
+		// 				   $("#yourOpponent").css("margin-left", "0px"); }
+		// else if (oth === 150) { $("#yourOpponent").attr("src","assets/images/kitana_attack_opp.gif"); }
+		// else if (oth === 175) { $("#yourOpponent").attr("src","assets/images/raiden_attack_opp.gif"); }
+		// else $("#yourOpponent").attr("src","assets/images/scorpion_attack_opp.gif");
 
 		
 		
@@ -153,10 +159,6 @@ $(".characters").on("click", function() {
 		hitPoints = hitPoints - counterAttack;
 		newAttackHit = newAttackHit + attackHit;
 		oppHitPoints = oppHitPoints - newAttackHit;
-
-		console.log("oppHitPoints = " + oppHitPoints);
-		console.log("hitPoints = " + hitPoints);
-		console.log("---------");
 
 		$("#damageDealt").text("You atatcked for " + newAttackHit);
 		$("#damageTaken").text("Opponent attacked you for " + counterAttack);
@@ -208,7 +210,6 @@ function fightSounds() {
 
 
 	var j = (Math.floor((Math.random() * 10) + 1));
-	console.log(j);
 		if (j === 1) { audioFightSound1.play(); }
 		else if (j === 2) { audioFightSound2.play(); }
 		else if (j === 3) { audioFightSound3.play(); }
@@ -226,6 +227,7 @@ function fightSounds() {
 function youWin() {
 		selectCharacter = 1;
 		finalEnemy++;
+		console.log(finalEnemy);
 		$("#oppHealth").text(0); 
 		$("#instructionText").text("Choose your next opponent.");
 		$("#yourOpponent").attr("src","");

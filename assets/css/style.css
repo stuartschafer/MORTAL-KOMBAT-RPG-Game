@@ -1,4 +1,4 @@
-body { background-image: url("../images/backdrop3.jpg");
+body { background-image: url("../images/backdrop.jpg");
 	   background-size: cover;
 	   color: white; }
 
@@ -36,9 +36,9 @@ margin-left: 350px; }
 						  font-size: 20px;
 						  }
 
-#yourFighter { margin-left: 300px; }
+#yourFighter { padding-left: 0px; }
 
-#yourOpponent { margin-left: 200px; }
+#yourOpponent { padding-left: 300px; }
 
 #music { position: fixed;
 		 top: 10px;
