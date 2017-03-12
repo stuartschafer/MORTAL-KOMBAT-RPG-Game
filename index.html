@@ -1,1 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mortal Kombat RPG Game</title>
 
+	<!-- This links the reset CSS sheet -->
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+
+    <!-- Added a link to Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    
+    <!-- This links to the jQuery Library -->
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+
+    <!-- This links the styling CSS sheet -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    <!-- This links the javascript -->
+	<script type="text/javascript" src="assets/javascript/game.js"></script>
+
+</head>
+<body>
+
+<!-- This is for the music -->
+<!-- <div id = "music">
+	<audio controls autoplay>
+	  <source src="assets/audio/theme.mp3" type="audio/mpeg">
+	</audio>
+</div> -->
+
+<div id="instructionText">Choose your character</div>
+
+<button class="characters" value="125">
+	<h1>Sub Zero</h1>
+	<img src="assets/images/subzero.gif" style="height:50px; width:30px;">
+	<h1 class="hitPoints">125</h1>
+</button>
+
+<button class="characters" value="150">
+	<h1>Kitana</h1>
+	<img src="assets/images/kitana.gif" style="height:50px; width:30px;">
+	<h1 class="hitPoints">150</h1>
+</button>
+
+<button class="characters" value="175">
+	<h1>Raiden</h1>
+	<img src="assets/images/raiden.gif" style="height:50px; width:30px;">
+	<h1 class="hitPoints">175</h1>
+</button>
+
+<button class="characters" value="200">
+	<h1>Scorpion</h1>
+	<img src="assets/images/scorpion.gif" style="height:50px; width:30px;">
+	<h1 class="hitPoints">200</h1>
+</button>
+
+<button id="lastEnemy">
+	<h1>LAST ENEMY!!!</h1>
+	<h1 class="hitPoints">DEFEAT THEM FOR ULTIMATE VICTORY!</h1>
+</button>
+
+<button id="fight">
+	<img src="assets/images/fightlogo.png" style="height:100px; width:300px;">
+</button>
+
+
+<div class="container">
+	  <div class="row">
+		    <div class="col-md-6">
+		      	<span id="damageDealt">Prepare for battle</span>
+		    </div>
+		    
+		    <div class="col-md-6">
+				<span id="damageTaken"></span>
+		    </div>
+	  </div>
+ </div>
+
+<div class="container">
+	  <div class="row">
+		    <div class="col-md-6">
+		      	<div class="progress">
+			  		<div class="progress-bar progress-bar-danger" id="yH" role="progressbar" aria-valuenow="100" aria-valuemin="20" aria-valuemax="100" style="width: 100%">
+			    		<span id="charHealth"></span>
+			  		</div>
+				</div>
+		    </div>
+		    
+		    <div class="col-md-6">
+				<div class="progress">
+			  		<div class="progress-bar progress-bar-danger" id="oH" role="progressbar" aria-valuenow="100" aria-valuemin="20" aria-valuemax="100" style="width: 100%">
+			    		<span id="oppHealth"></span>
+			  		</div>
+				</div>
+		    </div>
+	  </div>
+ </div>
+
+
+<img id="yourFighter" src=""/>
+<img id="yourOpponent" src=""/>
+
+<h1 id="fighter"></h1>
+<h1 id="opponent"></h1>
+
+
+
+
+</body>
+</html>
