@@ -19,28 +19,32 @@
     <!-- This links the javascript -->
 	<script type="text/javascript" src="assets/javascript/game.js"></script>
 
+	<!-- This links the new font -->
+	<link href="https://fonts.googleapis.com/css?family=Nova+Flat|Rock+Salt" rel="stylesheet">
+
 </head>
 <body>
 
 <!-- This is for the music -->
-<!-- <div id = "music">
+<div id = "music">
 	<audio controls autoplay>
 	  <source src="assets/audio/theme.mp3" type="audio/mpeg">
 	</audio>
-</div> -->
+</div>
 
 <div id="instructionText">Choose your character</div>
 
+<!-- These are for the character buttons for the user to choose from -->
 <button class="characters" value="125">
 	<h1>Sub Zero</h1>
 	<img src="assets/images/subzero.gif" style="height:50px; width:30px;">
 	<h1 class="hitPoints">125</h1>
 </button>
 
-<button class="characters" value="150">
+<button class="characters" value="160">
 	<h1>Kitana</h1>
 	<img src="assets/images/kitana.gif" style="height:50px; width:30px;">
-	<h1 class="hitPoints">150</h1>
+	<h1 class="hitPoints">160</h1>
 </button>
 
 <button class="characters" value="175">
@@ -55,15 +59,17 @@
 	<h1 class="hitPoints">200</h1>
 </button>
 
+
+<!-- This button is hidden until the last enemy appears -->
 <button id="lastEnemy">
 	<h1>LAST ENEMY!!!</h1>
 	<h1 class="hitPoints">DEFEAT THEM FOR ULTIMATE VICTORY!</h1>
 </button>
 
+<!-- This is the fight button -->
 <button id="fight">
 	<img src="assets/images/fight.gif" style="height:100px; width:300px;">
 </button>
-
 
 <div class="container">
 	  <div class="row">
@@ -77,6 +83,7 @@
 	  </div>
  </div>
 
+<!-- These are the health bars for player and enemy -->
 <div class="container">
 	  <div class="row">
 		    <div class="col-md-6">
@@ -97,13 +104,18 @@
 	  </div>
  </div>
 
+<!-- This is where the fighting takes place -->
 <div class="container">
 	  <div class="row">
-		    <div class="col-md-6">
+		    <div class="col-md-4">
 		      	<img id="yourFighter" src=""/>
 		    </div>
+
+			<div class="col-md-4">
+		      	<img id="fightScene" src=""/>
+		    </div>
 		    
-		    <div class="col-md-6">
+		    <div class="col-md-4">
 				<img id="yourOpponent" src=""/>
 		    </div>
 	  </div>
