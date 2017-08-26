@@ -1,46 +1,62 @@
-body { background-image: url("../images/backdrop.jpg");
-	   background-size: cover;
-	   color: white;
-	   font-family: 'Nova Flat'; }
+body {
+	background-image: url("../images/backdrop.jpg");
+	background-size: cover;
+	color: white;
+	font-family: 'Nova Flat';
+}
 
-.characters { background-color: green;
-		  	  margin-top: 0px;
-		  	  margin-left: 20px;
-		  	  width: 150px;
-		  	  padding: 0px; }
+h1 { 
+	font-weight: bold;
+	font-size: 15px;
+}
 
-#lastEnemy { display: none;
-			 background-color: blue;
-			 margin-left: 20px;
-			 height: 146px;
-			 width: 450px; }
+.characters {
+	background-color: green;
+	margin-top: 0px;
+	margin-left: 20px;
+	width: 150px;
+	padding: 0px;
+}
 
-h1 { font-weight: bold;
-	font-size: 15px; }
+#lastEnemy {
+	display: none;
+	background-color: blue;
+	margin-left: 20px;
+	height: 146px;
+	width: 450px;
+}
 
-#instructionText { font-family: 'Rock Salt', cursive;
-				   font-size: 20px;
-				   padding: 20px; }
+#instructionText {
+	font-family: 'Rock Salt', cursive;
+	font-size: 20px;
+	padding: 20px;
+}
 
-#fight { display: none;
-		 position: fixed;
-		 width: 350px;
-		 height: 146px;
-		 top: 68px;
-    	 right: 200px;
-		 background-color: black; }
+#fight {
+	display: none;
+	position: fixed;
+	width: 350px;
+	height: 146px;
+	top: 68px;
+	right: 200px;
+	background-color: black;
+}
 
-#fighter, #opponent { font-size: 30px;
-					  margin-left: 350px; }
+ .healthDamage {
+	text-align: center;
+	font-size: 20px;
+}
 
-#charHealth, #oppHealth, #damageDealt, #damageTaken {
-			text-align: center;
-			font-size: 20px; }
+#yourFighter {
+	padding-left: 0px;
+}
 
-#yourFighter { padding-left: 0px; }
+#yourOpponent {
+	padding-left: 100px;
+}
 
-#yourOpponent { padding-left: 100px; }
-
-#music { position: fixed;
-		 top: 10px;
-		 right: 10px; }
+#music {
+	position: fixed;
+	top: 10px;
+	right: 10px;
+}
